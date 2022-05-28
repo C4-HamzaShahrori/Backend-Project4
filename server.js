@@ -29,9 +29,16 @@ app.use("/recommendedDr",RecommendedDoctorRouter)
 app.use("/comment",commentRouter)
 app.use("/tips",tipsRouter)
 
+
+
+
+app.get("/test", (req, res) =>
+  res.json("server is running :)))))))))))))))))))))))))))")
+);
+
 //------------------
 const PORT = 5000;
 
-app.listen(PORT, () => {
+app.listen(process.env.PORT ||5000, () => {
   console.log(`SERVER WORKING ON PORT: ${PORT}`);
 });
