@@ -10,12 +10,12 @@ app.use(express.json());
 
 //----------
 
-const usersRouter = require("../backend/routes/user");
-const doctorRouter = require("../backend/routes/doctor");
+const usersRouter = require("./routes/user");
+const doctorRouter = require("./routes/doctor");
 const rolesRouter = require("./routes/role");
-const loginRouter = require("../backend/routes/login");
-const RecommendedDoctorRouter = require("../backend/routes/recommendedDr");
-const commentRouter = require("../backend/routes/comment");
+const loginRouter = require("./routes/login");
+const RecommendedDoctorRouter = require("./routes/recommendedDr");
+const commentRouter = require("./routes/comment");
 const tipsRouter = require("./routes/tips");
 
 //---------
