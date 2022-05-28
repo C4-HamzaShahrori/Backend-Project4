@@ -10,35 +10,31 @@ app.use(express.json());
 
 //----------
 
-const usersRouter=require("../backend/routes/user")
-const doctorRouter=require("../backend/routes/doctor")
-const rolesRouter=require("./routes/role")
-const loginRouter=require("../backend/routes/login")
-const RecommendedDoctorRouter=require("../backend/routes/recommendedDr")
-const commentRouter=require("../backend/routes/comment")
-const tipsRouter=require("./routes/tips")
-
+const usersRouter = require("../backend/routes/user");
+const doctorRouter = require("../backend/routes/doctor");
+const rolesRouter = require("./routes/role");
+const loginRouter = require("../backend/routes/login");
+const RecommendedDoctorRouter = require("../backend/routes/recommendedDr");
+const commentRouter = require("../backend/routes/comment");
+const tipsRouter = require("./routes/tips");
 
 //---------
 
-app.use("/users", usersRouter)
-app.use("/doctors",doctorRouter)
-app.use("/roles",rolesRouter)
-app.use("/login",loginRouter)
-app.use("/recommendedDr",RecommendedDoctorRouter)
-app.use("/comment",commentRouter)
-app.use("/tips",tipsRouter)
-
-
-
+app.use("/users", usersRouter);
+app.use("/doctors", doctorRouter);
+app.use("/roles", rolesRouter);
+app.use("/login", loginRouter);
+app.use("/recommendedDr", RecommendedDoctorRouter);
+app.use("/comment", commentRouter);
+app.use("/tips", tipsRouter);
 
 app.get("/test", (req, res) =>
   res.json("server is running :)))))))))))))))))))))))))))")
 );
 
 //------------------
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
-app.listen(process.env.PORT ||5000, () => {
+app.listen(PORT, () => {
   console.log(`SERVER WORKING ON PORT: ${PORT}`);
 });

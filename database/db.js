@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-mongoose.connect("mongodb+srv://mongo:D9SusPbafxBTtVPt@finddoctor.u989z.mongodb.net/test").then(
+mongoose.connect(process.env.DB_URI).then(
   () => {
     console.log("DB READY TO USE ..");
   },
